@@ -6,7 +6,7 @@
     <!--<StackLayout Margin="20">-->
     <ScrollView>
         <Grid Margin="20" ColumnSpacing="10" RowSpacing="25" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
-            
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
@@ -14,17 +14,25 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            
+
             <Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" Padding="10" HorizontalOptions="FillAndExpand" BackgroundColor="#D9D9D9">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
                     <Image Source="dice.png" HorizontalOptions="Start" WidthRequest="100" HeightRequest="100"/>
-                    <Label Text="Race 1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label Text="Race 1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+                        <BoxView HeightRequest="2"/>
+                        <Label Text="https://google.com.br" />
+                    </StackLayout>
                 </StackLayout>
             </Frame>
             <Frame Grid.Row="1" Grid.Column="0" CornerRadius="10" Padding="10" HorizontalOptions="FillAndExpand" BackgroundColor="#D9D9D9">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
                     <Image Source="dice.png" HorizontalOptions="Start" WidthRequest="100" HeightRequest="100"/>
-                    <Label Text="Race 1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Center">
+                        <Label Text="Race 1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+                        <BoxView HeightRequest="2"/>
+                        <Label Text="https://google.com.br" />
+                    </StackLayout>
                 </StackLayout>
             </Frame>
         </Grid>
