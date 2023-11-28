@@ -3,23 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="dandd.Views.RaceView"
              Title="RacesView">
-    <StackLayout Margin="20">
-        <Frame CornerRadius="10" Padding="10" HorizontalOptions="FillAndExpand" BackgroundColor="#D9D9D9">
-            <!-- Vertical StackLayout for the image and label inside the frame -->
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
-                <!-- Image of the dice -->
-                <Image Source="dice.png" HorizontalOptions="Start" WidthRequest="100" HeightRequest="100"/>
-                <!-- Label for the race name -->
-                <Label Text="Race 1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
-            </StackLayout>
-        </Frame>
-    </StackLayout>
-    <!--<FlexLayout>
-        <Frame BorderColor="Gray" CornerRadius="5" FlexLayout.Grow="1" FlexLayout.Basis="25%">
-                <Image Source="dice.png" MaximumWidthRequest="80" HorizontalOptions="Start" VerticalOptions="Start"/>
-                -->
-    <!--<Label Text="Classe 1" FontFamily="Roboto" FontSize="20" />-->
-    <!--
-        </Frame>
-    </FlexLayout>-->
+    <!--<StackLayout Margin="20">-->
+    <ScrollView>
+        <Grid Margin="20" ColumnSpacing="10" RowSpacing="25" VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Frame Grid.Row="0" Grid.Column="0" CornerRadius="10" Padding="10" HorizontalOptions="FillAndExpand" BackgroundColor="#D9D9D9">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Image Source="dice.png" HorizontalOptions="Start" WidthRequest="100" HeightRequest="100"/>
+                    <Label Text="Race 1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="1" Grid.Column="0" CornerRadius="10" Padding="10" HorizontalOptions="FillAndExpand" BackgroundColor="#D9D9D9">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center">
+                    <Image Source="dice.png" HorizontalOptions="Start" WidthRequest="100" HeightRequest="100"/>
+                    <Label Text="Race 1" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ScrollView>
+    <!--</StackLayout>-->
 </ContentPage>

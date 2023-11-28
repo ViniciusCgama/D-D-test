@@ -6,27 +6,24 @@
     xmlns:local="clr-namespace:dandd.Views"
     Shell.FlyoutBehavior="Disabled">
     <TabBar>
-        <Tab Title="Races"
-            Icon="elf.png">
-            <ShellContent 
-                Title="" 
+        <ShellContent 
+                Title="Races"
                 ContentTemplate="{ DataTemplate local:RaceView }"
-                Route="Race" />
-        </Tab>
-        <Tab Title="Races"
-            Icon="elf.png">
-            <ShellContent 
-                Title="" 
+                Route="Race"
+                Icon="elf.png"
+                />
+
+        <ShellContent 
+                Title="Classes" 
                 ContentTemplate="{ DataTemplate local:ClassView }"
-                Route="Class" />
-        </Tab>
-        <Tab Title="Races"
-            Icon="rock_dwarf.svg">
-            <ShellContent 
-                Title="" 
+                Route="Class"
+                Icon="dice.png"/>
+        <ShellContent 
+                Title="Subrace" 
                 ContentTemplate="{ DataTemplate local:SubRaceView }"
-                Route="Subrace" />
-        </Tab>
+                Route="Subrace"
+                Icon="dotnet_bot.png"
+                />
     </TabBar>
 
 </Shell>
