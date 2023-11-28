@@ -7,7 +7,7 @@ namespace dandd
         {
             InitializeComponent();
 
-            MainPage = new RaceView();
+            MainPage = new AppShell();
         }
     }
 }

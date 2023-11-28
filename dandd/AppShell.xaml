@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="dandd.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:dandd.Views"
+    Shell.FlyoutBehavior="Disabled">
+    <TabBar>
+        <Tab Title="Races"
+            Icon="elf.png">
+            <ShellContent 
+                Title="" 
+                ContentTemplate="{ DataTemplate local:RaceView }"
+                Route="Race" />
+        </Tab>
+        <Tab Title="Races"
+            Icon="elf.png">
+            <ShellContent 
+                Title="" 
+                ContentTemplate="{ DataTemplate local:ClassView }"
+                Route="Class" />
+        </Tab>
+        <Tab Title="Races"
+            Icon="rock_dwarf.svg">
+            <ShellContent 
+                Title="" 
+                ContentTemplate="{ DataTemplate local:SubRaceView }"
+                Route="Subrace" />
+        </Tab>
+    </TabBar>
+
+</Shell>
