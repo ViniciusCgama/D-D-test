@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using dandd.Models;
 using dandd.Services;
+using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace dandd.ViewModels
@@ -9,27 +10,28 @@ namespace dandd.ViewModels
     {
         private readonly RaceService _service;
 
-        [ObservableProperty]
-        public int _Count;
 
         [ObservableProperty]
-        public List<Race> _results;
+        public int _count;
+
+        [ObservableProperty]
+        public ObservableCollection<Race> _races;
 
         public ICommand GetAllRacesCommand { get; }
         public RaceViewModel()
         {
-            Results = new RaceResponse().Results;
-            _service = new RaceService();
-            GetAllRacesCommand = new Command(async () => await LoadRacesAsync());
+            _service = new RaceService(); //
+            GetAllRacesCommand = new Command(async () => await LoadRacesAsync()); //
+            Task.Run(async () => await LoadRacesAsync());
         }
 
         private async Task LoadRacesAsync()
         {
             try
             {
-                var response = await _service.GetAllRacesAsync();
-                Results = response.Results;
-                Count = response.Count;
+                RaceResponse raceResponse = await _service.GetAllRacesAsync();
+                Races = new ObservableCollection<Race>(raceResponse.Results);
+                Count = raceResponse.Count;
             }
             catch (Exception ex)
             {
