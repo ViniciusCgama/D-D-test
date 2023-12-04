@@ -2,8 +2,8 @@
 
 public class RaceResponse
 {
-    public int Count { get; }
-    public List<Race> Results { get; }
+    public int Count { get; set; }
+    public List<Race> Results { get; set; }
 
 }
 public class Race
